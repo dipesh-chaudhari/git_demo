@@ -1,0 +1,243 @@
+changes for commit
+
+1.How do you handle exception? 
+	 Exception is a abnormal behaviour, run time error.
+
+ 	It is the off beat situation in your program where your program should be ready to handle it with appropriate response.	
+
+	thats why c++ provides a built-in error handling machanism that is called exception handling.
+
+	using exception handling, you can more easily manage and more respond to runtime errors. 
+
+
+
+	 try, catch, throw are the keywords..
+
+	 	try;
+		    program statements that you want to monitor for exception are contained in a try block.
+
+		throw;
+		    if any exception occurs whithin the try block, it is thrown using throw.
+
+		catch;
+ 	 	    the exception is caught, using catch, and processed
+
+
+==============================================================================================================================
+2.what is this pointer ?
+	this is a keyword
+
+	this is a local object pointer in every instance member function containing address of the caller object.
+
+	this pointer can not be modify.
+
+	it is used to refer caller object in member function.
+
+	
+	this pointer is used to represent the address of an object inside a member function.
+
+	*global *static member *friend functions do not get this pointer...
+
+==========================================================================================================================
+
+3.What is function overloading? Which are the rules to overload function?
+
+	Function overloading is a feature of C++ programming..
+
+	1 function name is overlodded with different job is knows as function overloading...
+	
+	the rules to overload function is more than 1 function is defined in a class having same name, but each expecting differants numbers of parameters  or  differant type of parameters  or  both are should be differant then the functions will be refered as function overloading.... 
+
+
+
+
+Difference between function overloading and function overriding	
+
+	*1)function overloading;
+	   Function Overloading happens in the same class when we declare same functions with different arguments in the same class.	 	
+	  In function overloading function signature should be different for all the overloaded functions. 
+
+	*2)function overriding;
+		Function Overriding is happens in the child class when child class overrides parent class function.
+
+	       In function overriding the signature of both the functions (overriding function and overridden function) should be same.
+
+=====================================================================================================================================
+
+4.What is class and object explain with example?
+	*class;
+	  Class is collection of data member and member function..
+
+	  Class represents set of such objects which is having common structure and common behavior.
+
+	  is logical entity...
+
+	*object;
+	  object is Instance of class is object..
+
+	  An entity, which get space inside memory is called object.
+
+	  Object is used to access data members and member function of the class...
+
+    example;
+	class: car 
+		(member fun :getspeed(),setspeed(),getfuel(),gear())
+		(data member: maxspeed,fuel)
+
+	object: mercdis, bmw, audi
+
+
+	* Data Members
+		-Data member is also called as field, attribute, property etc.
+
+	*Member Functions
+		-A function implemented inside class scope is called member function
+		
+		-Member function is also called as method, operation, behavior or message.
+
+
+===================================================================================================================================
+
+
+5. What is difference between call by value and call by pointer ?
+
+	*Call by value
+
+The call by value method of passing arguments to a function copies the actual value of an argument into the formal parameter of the function. 
+
+In this case, changes made to the parameter inside the function have no effect on the argument.
+
+By default, C++ uses call by value to pass arguments. In general, this means that code within a function cannot alter the arguments used to call the function.
+
+	*Call by pointer or Call by address
+
+The call by pointer method of passing arguments to a function copies the address of an argument into the formal parameter.
+
+ Inside the function, the address is used to access the actual argument used in the call. This means that changes made to the parameter affect the passed argument.
+
+To pass the value by pointer, argument pointers are passed to the functions just like any other value.
+
+
+
+
+
+
+	In C, structs can be passed by value(copy) but arrays are passed by reference, always.
+
+
+	*Advantages of Call by reference
+
+Copy of argument is not made, so it is faster than copy by value.
+
+Reference allow to change the value of the argument, but if you want to keep that constant you can use the const.
+
+you can return multiple values using call by reference using function. But function can only return one values right, so we’ll pass the call by reference and store the value into that and close the function.
+
+
+======================================================================================================================================
+
+6. What is friend function? In which condition, shall we declare function as a friend and class as a friend?
+
+	it is declared in the class with friend keyword...
+
+	friend function is not a member function of a class.
+
+	it must be defined outside the class.
+
+	friend function can access any member(private protected public) of the class to which it is friend...
+
+	it has no caller object...
+
+	friend function can not access member of the class directly..
+
+
+
+	Generally, In c++ their is one rule that data members of class should be accessd by member funct
+ of same class.means private data is accessed by only member function of the same class.
+    
+  
+  But suppose their are two classes with differnt data members and i want to access members of
+ both classes by using single function.
+So we can assess that private data of both class using 
+friend funct. 
+
+But the frd funct is against the 
+concept of data hinding and thats one major drawback of frd funct also.
+
+to achieve re-usability we declear class as frd
+	  
+
+==================================================================================================================================
+7. What is modularity? What is advantage of it?
+	Modularity means divide your code into modules and then solve that module but which have connections with other modules is called modularity..
+
+	Like divide and conquer technique
+
+	adv: it is helps to minimize module dependancy...
+======================================================================================================================================
+
+8. What is static binding? What is dynamic binding?
+
+	binding:
+		linking between method call (using obj) and method defination (by function)
+	
+	Static Binding: 
+		binding which can be resolved at compile time by compiler.
+
+		it also called early binding...
+        
+               in this static binding happens before a program actually runs...
+
+		example: method Overloading...
+
+
+	Dynamic binding:
+		in dynamic binding compiler is not able to resolve the binding at compile time..
+
+		it also called late binding
+
+		in this dynamic binding happens during run time...
+
+		example: method Overriding...
+
+
+	Differance:::
+
+	the main differance is static binding uses type information for binding...
+	while dynamic binding uses object to resolve binding...
+
+	
+======================================================================================================================================
+
+9. What do you mean by top down and bottom up approach?
+
+	 bottom up means, you make the smallest pieces of your program first and then use them as blocks to build a bigger program.
+
+	In top down, you start building the highest level of abstraction and then make small bits that will fit it.
+
+top down;
+	follows procedure oriented programming..
+	No data security..
+	programmimg languages like c, pascal follows this approach.
+
+bottom up;
+	follows object oriented programimng
+	data security exist..
+	programmimg languages like c++, java follows this approach.
+
+====================================================================================================================================
+
+10. What is the size of object of empty class? Why?
+
+	size of an empty class is 1 byte in c++...
+
+	in class have multiple objects they can have different unique memory location hence the this memory location store need some memory thats why size of an empty class is reserved 1 byte..
+
+
+
+empty class;  a class does not contain any data members...
+
+
+
+
+
